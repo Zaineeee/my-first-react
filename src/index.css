@@ -1,0 +1,334 @@
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Global Styles */
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(
+    -45deg,
+    #0a192f,
+    #112240,
+    #233554,
+    #1f4068
+  );
+  background-size: 400% 400%;
+  animation: gradientAnimation 25s ease infinite;
+  color: #e6f1ff;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+}
+
+/* Main Container */
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 20px;
+  padding: 20px;
+  max-width: 1700px;
+  width: 1700px;
+}
+
+/* Card Styles */
+.card {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(15px);
+  padding: 20px;
+  border-radius: 15px;
+  text-align: center;
+  width: 340px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease-in-out;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+/* Counter */
+.counter-value {
+  font-size: 40px;
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+/* Buttons */
+.btn-group {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin: 10px;
+}
+
+.btn {
+  background: #64ffda;
+  color: #0a192f;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  font-weight: 600;
+  margin: 2px;
+}
+
+.btn:hover {
+  background: #48d5b5;
+  transform: translateY(-2px);
+}
+
+.reset {
+  background: #ff6b6b;
+  color: white;
+}
+
+.reset:hover {
+  background: #ff5252;
+}
+
+/* Calculator Inputs */
+.input-group input {
+  width: 95%;
+  padding: 10px;
+  margin: 5px 0;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+}
+
+.input-group input::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+/* Result Styling */
+.result {
+  font-size: 18px;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.result span {
+  color: #64ffda;
+}
+
+/* TODO LIST TABLE */
+.todo-container {
+  width: 100%;
+  max-width: 1500px;
+  margin: 200 px auto;
+  text-align: center;
+}
+
+/* Todo Table */
+.todo-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  overflow: hidden;
+  margin-top: 200px;
+}
+
+/* Table Header */
+.todo-table th {
+  background: rgba(100, 255, 218, 0.1);
+  padding: 12px;
+  text-align: left;
+  color: white;
+  font-size: 18px;
+}
+
+/* Table Rows */
+.todo-table td {
+  padding: 12px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  color: white;
+  font-size: 16px;
+}
+
+/* Alternating Row Colors */
+.todo-table tbody tr:nth-child(even) {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+/* Hover Effect */
+.todo-table tbody tr:hover {
+  background: rgba(255, 255, 255, 0.15);
+  transition: background 0.3s ease-in-out;
+}
+
+/* Status Colors */
+.completed {
+  color: #64ffda;
+  font-weight: bold;
+}
+
+.not-completed {
+  color: #ff6b6b;
+  font-weight: bold;
+}
+
+/* Loading Animation */
+.loading {
+  font-size: 20px;
+  font-weight: bold;
+  background: rgba(255, 255, 255, 0.2);
+  padding: 10px;
+  border-radius: 8px;
+  backdrop-filter: blur(8px);
+  text-align: center;
+}
+
+/* User List Container */
+.user-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 2000px;
+  width: 2000px;
+  margin: 20px auto;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Form Styling */
+input {
+  width: 90%;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 5px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  font-size: 16px;
+}
+
+input::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+/* Buttons */
+button {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.add {
+  background: #64ffda;
+  color: #0a192f;
+}
+
+.add:hover {
+  background: #48d5b5;
+}
+
+.update {
+  background: #64ffda;
+  color: #0a192f;
+}
+
+.update:hover {
+  background: #48d5b5;
+}
+
+.edit {
+  background: #64ffda;
+  color: #0a192f;
+  margin-right: 5px;
+}
+
+.edit:hover {
+  background: #e67e22;
+}
+
+.delete {
+  background: #ff6b6b;
+  color: white;
+}
+
+.delete:hover {
+  background: #ff5252;
+}
+
+/* User List Table */
+table {
+  width: 100%;
+  margin-top: 20px;
+  border-collapse: collapse;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+th,
+td {
+  padding: 12px;
+  text-align: left;
+  color: white;
+}
+
+th {
+  background: rgba(255, 255, 255, 0.2);
+  font-size: 18px;
+}
+
+tbody tr:nth-child(even) {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+tbody tr:hover {
+  background: rgba(255, 255, 255, 0.15);
+  transition: background 0.3s ease-in-out;
+}
+
+/* Add User Form Container */
+.form-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto 20px auto;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.form-container input {
+  width: 100%;
+  max-width: 300px;
+}
+
+.form-container button {
+  margin-top: 10px;
+}
